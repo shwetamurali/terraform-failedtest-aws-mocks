@@ -3,7 +3,7 @@ terraform {
   required_version = ">= 1.7.0"
   required_providers { aws = { source = "hashicorp/aws" } }
 }
-// [test-trigger] failure: orphaned bucket on teardown destroy
+// [test-trigger] failure: orphaned bucket on teardown destroy (module-test)
 resource "terraform_data" "destroy_failure" {
   count = var.fail_on_teardown ? 1 : 0
 
